@@ -18,3 +18,12 @@ MacOSやLinux上ならcronを、Windows上ならタイムスケジューラー�
   - TeamsのWebhook：[こちら](https://learn.microsoft.com/ja-jp/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet)を参照して取得。
   - DiscordのWebhook：[こちら](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)を参照して取得。
 - questions.csv ...通知済みの質問IDを保持。初期状態だと空のファイル。（リポジトリ上では"questions_sample.csv"）
+
+## 通知イメージ
+Teams
+
+![test_image1](teams_sample.png)
+
+Discord
+
+![test_image2](discord_sample.png)
