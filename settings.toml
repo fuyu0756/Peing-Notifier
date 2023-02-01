@@ -1,0 +1,9 @@
+# TeamsのWebhook URL
+teams_webhook = "xxxxx"
+
+# DiscordのWebhook URL
+discord_webhook = "yyyyy"
+
+# ウェブシスアカウントのログイン情報
+id = "id"
+pass = "password"
