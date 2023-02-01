@@ -51,7 +51,8 @@ with open(questionsPath, mode="r") as f:
 for i in range(103):
     page = i + 1
     # 未回答のページに移動
-    res = session.get(f"https://peing.net/ja/box?page={page}")
+    page_url = f"https://peing.net/ja/box?page={page}"
+    res = session.get(page_url)
     time.sleep(0.5)
     soup = BeautifulSoup(res.text, "html.parser")
 
@@ -66,6 +67,7 @@ for i in range(103):
         for data_questions in data_questions_json:
             body = data_questions.get("body")
             uuid_hash = data_questions.get("uuid_hash")
+            question_url = "https://peing.net/ja/q/" + uuid_hash
 
             # 未通知の場合通知を行う
             if uuid_hash not in hashSet:
@@ -75,7 +77,7 @@ for i in range(103):
                 discord.post(
                     username="Peing-質問箱-通知bot",
                     avatar_url="https://user-images.githubusercontent.com/82703534/216120021-e3315452-a9b6-4a88-9d03-d026764c80ef.png",
-                    embeds=[{"title": "新しい質問が来ています。", "description": body}]
+                    embeds=[{"title": "新しい質問が来ています。", "description": f"{body}\n\n URL → {question_url}"}]
                 )
 
     # 質問がなければ回答済みリストにIDを追加して終了
