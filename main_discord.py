@@ -77,7 +77,7 @@ for i in range(103):
                 discord.post(
                     username="Peing-質問箱-通知bot",
                     avatar_url="https://user-images.githubusercontent.com/82703534/216120021-e3315452-a9b6-4a88-9d03-d026764c80ef.png",
-                    embeds=[{"title": "新しい質問が来ています。", "description": f"{body}\n\n URL → {question_url}"}]
+                    embeds=[{"title": "新しい質問が来ています。", "description": f"{body}\n\n [リンク]({question_url})"}]
                 )
 
     # 質問がなければ回答済みリストにIDを追加して終了
