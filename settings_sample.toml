@@ -4,6 +4,6 @@ teams_webhook = "xxxxx"
 # DiscordのWebhook URL
 discord_webhook = "yyyyy"
 
-# ウェブシスアカウントのログイン情報
+# Peingアカウントのログイン情報
 id = "id"
 pass = "password"
